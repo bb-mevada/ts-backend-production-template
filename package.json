@@ -1,0 +1,11 @@
+{
+  "name": "ts-backend-production-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "coder bb",
+  "license": "ISC"
+}
