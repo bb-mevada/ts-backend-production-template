@@ -5,8 +5,8 @@
   "main": "src/server.js",
   "scripts": {
     "dist": "npx tsc",
-    "dev": "nodemon src/server.ts",
-    "start": "node dist/server.js",
+    "dev": "cross-env NODE_ENV=development nodemon src/server.ts",
+    "start": "cross-env NODE_ENV=production node dist/server.js",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "format:check": "prettier . --check",
@@ -36,5 +36,9 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.5.2",
     "typescript-eslint": "^7.14.1"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv-flow": "^4.1.0"
   }
 }
