@@ -2,8 +2,6 @@ import dotenvFlow from 'dotenv-flow'
 
 dotenvFlow.config()
 
-// console.log(process.env)
-
 export default {
     // General
     ENV: process.env.ENV,
