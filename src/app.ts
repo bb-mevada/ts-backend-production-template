@@ -4,10 +4,12 @@ import router from './router/apiRouter'
 import globalErrorHandler from './middleware/globalErrorHandler'
 import responseMessage from './constant/responseMessage'
 import httpError from './util/httpError'
+import helmet from 'helmet'
 
 const app: Application = express()
 
 // Middleware
+app.use(helmet())
 app.use(express.json())
 app.use(express.static(path.join(__dirname, '../', 'public')))
 
