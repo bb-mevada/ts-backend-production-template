@@ -11,7 +11,9 @@
     "lint:fix": "eslint --fix",
     "format:check": "prettier . --check",
     "format:fix": "prettier . --fix",
-    "prepare": "husky"
+    "prepare": "husky",
+    "migrate:dev": "cross-env MIGRATE_MODE=development node script/migration.js",
+    "migrate:prod": "cross-env MIGRATE_MODE=production node script/migration.js"
   },
   "author": "coder bb",
   "license": "ISC",
@@ -46,6 +48,7 @@
     "express": "^4.19.2",
     "mongoose": "^8.5.1",
     "source-map-support": "^0.5.21",
+    "ts-migrate-mongoose": "^3.8.3",
     "winston": "^3.13.1",
     "winston-mongodb": "^5.1.1"
   }
